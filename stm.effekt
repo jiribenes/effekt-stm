@@ -1,6 +1,7 @@
 // stdlib imports
 import test
 import ref
+import process
 
 // local imports
 import myUtil
@@ -295,7 +296,7 @@ def main() = {
     orElse{getR(r1, amount)}{getR(r2,amount)}
   }
   
-  suite("orElse"){
+  val resultOrElse = suite("orElse"){
 
     test("First retries, second succeeds") {
       val r1 = defineTVar(8)
@@ -404,7 +405,7 @@ def main() = {
     }
   } 
   
-  suite("Retry") {
+  val resultRetry = suite("Retry") {
     test("Retry") {
       def get13(r1: Resource, r2: Resource): Unit / {Transaction, Memory, Yield} = {
         val a = do readTVar(r1)
@@ -439,4 +440,6 @@ def main() = {
     }
   }
 
+  val res = if (resultOrElse && resultRetry) { exit(0) } else { exit(1) }
+  ()
 }

@@ -1,0 +1,64 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Effekt Main (JS)",
+            "type": "shell",
+            "command": "effekt",
+            "args": [
+                "stm.effekt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Effekt Tests (JS)",
+            "type": "shell",
+            "command": "effekt",
+            "args": [
+                "stm.effekt"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Nix Run (JS)",
+            "type": "shell",
+            "command": "nix",
+            "args": [
+                "run"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Nix Build (JS)",
+            "type": "shell",
+            "command": "nix",
+            "args": [
+                "build"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

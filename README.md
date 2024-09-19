@@ -1,6 +1,6 @@
 # Software Transactional Memory in Effekt
 
-_Tested with Effekt commit `430369f`._
+_Uses the (unreleased) Effekt project template._
 
 This implementation was developed in the course of a bachelor thesis.
 

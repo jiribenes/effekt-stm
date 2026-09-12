@@ -22,7 +22,6 @@
         ## Project configuration
         pname = "effekt-stm";         # package name
         version = "0.1.0";            # package version
-        src = ./.;                    # source folder
         mainFile = "stm.effekt";      # relative path to entrypoint (as a string)
         testFiles = [ "stm.effekt" ]; # relative paths to tests (as strings)
 
@@ -30,6 +29,7 @@
         effektConfig = {
           ## Uncomment and set a specific version if needed:
           # version = "0.3.0";
+
           backends = with effekt-lib.effektBackends; [ js llvm ];
         };
 
